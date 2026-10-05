@@ -1,0 +1,33 @@
+// ======================================
+// ARCTIC CIRCLE POSITION
+// ======================================
+
+const latitude =
+  THREE.MathUtils.degToRad(66.5);
+
+const longitude =
+  THREE.MathUtils.degToRad(0);
+
+// Just above Earth's surface
+const santaRadius =
+  EARTH_RADIUS + 0.08;
+
+const x =
+  santaRadius *
+  Math.cos(latitude) *
+  Math.cos(longitude);
+
+const y =
+  santaRadius *
+  Math.sin(latitude);
+
+const z =
+  santaRadius *
+  Math.cos(latitude) *
+  Math.sin(longitude);
+
+santa.position.set(
+  x,
+  y,
+  z
+);
